@@ -13,7 +13,7 @@ function App() {
   const [weather, setWeather] = useState(false)
 
   const getWeather = async (lat, long) => {
-    const weatherResponse = await axios.get("http://api.openweathermap.org/data/2.5/weather", {
+    const weatherResponse = await axios.get("https://api.openweathermap.org/data/2.5/weather", {
       params: {
         lat: lat,
         lon: long,
