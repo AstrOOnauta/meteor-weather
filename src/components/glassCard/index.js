@@ -3,12 +3,13 @@ import styled, { keyframes } from "styled-components";
 const MainGlassCard = styled.div`
     background-color: rgba( 255, 255, 255, 0 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.35 );
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 80%;
     max-width: 80%;
+    min-width: 300px;
     min-height: 35vh;
-    margin: 1.5rem auto 1.5rem auto;
+    margin: 1.5rem auto 0 auto;
 `
 
 const ContainerGlassCard = styled.div`
@@ -73,6 +74,7 @@ export default function GlassCard(props){
     let iconWeather
     let descriptionWeather
 
+    //Conditional to show the weather icon according with local weather
     if(props.weather.weather[0].description === "clear sky"){
         iconWeather = "fas fa-sun"
         descriptionWeather = "Limpo"
@@ -106,7 +108,7 @@ export default function GlassCard(props){
         <MainGlassCard>
             <ContainerGlassCard>
                 <TemperatureArea>
-                    <TextCity>Clima em {props.weather.name}</TextCity>
+                    <TextCity>Clima Local ({props.weather.name})</TextCity>
                     <TextTemperature>{(props.weather.main.temp).toFixed(0)}°C</TextTemperature>
                     <TextDescription>{descriptionWeather}</TextDescription>
                 </TemperatureArea>
