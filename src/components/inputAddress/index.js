@@ -30,6 +30,9 @@ const Input = styled.input`
     font-size: large;
     border-radius: 2rem 0 0 2rem;
     border: none;
+    &:focus {
+        outline: none;
+    }
 `
 
 const Button = styled.button`
