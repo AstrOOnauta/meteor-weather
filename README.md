@@ -17,6 +17,7 @@ Project created to increase the skills with API integration.
     - Styled-Components
     - Axios
     - OpenWeatherMap API
+    - OpenCage Geocoder API
 <hr>
 
 ## Instalação
